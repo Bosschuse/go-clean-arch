@@ -1,10 +1,13 @@
 package rest
 
 import (
+	"archive/zip"
 	"fmt"
+	"io"
 	"log"
 	"net/http"
 	"os"
+	"path/filepath"
 
 	"github.com/bxcodec/go-clean-arch/domain"
 	"github.com/labstack/echo/v4"
@@ -19,16 +22,16 @@ func NewPDFHandler(e *echo.Echo) {
 
 func MergePDF(c echo.Context) error {
 	log.SetPrefix("MergePDF: ")
-	filenames, err := handleInputFile(c)
-	if err != nil {
-		return c.JSON(http.StatusBadRequest, domain.ErrBadParamInput.Error())
-	}
+	// filenames, err := handleInputFile(c)
+	// if err != nil {
+	// 	return c.JSON(http.StatusBadRequest, domain.ErrBadParamInput.Error())
+	// }
 
-	if len(filenames) < 2 {
-		return c.JSON(http.StatusBadRequest, domain.ErrBadParamInput.Error())
-	}
+	// if len(filenames) < 2 {
+	// 	return c.JSON(http.StatusBadRequest, domain.ErrBadParamInput.Error())
+	// }
 
-	pdfinPath, err := saveFileToTmp(filenames)
+	pdfinPath, err := saveFileToTmp(c)
 	if err != nil {
 		return c.JSON(http.StatusInternalServerError, err.Error())
 	}
@@ -47,37 +50,36 @@ func MergePDF(c echo.Context) error {
 
 func SplitPDF(c echo.Context) error {
 	log.SetPrefix("SplitPDF: ")
-	filenames, err := handleInputFile(c)
-	if err != nil {
-		return c.JSON(http.StatusBadRequest, domain.ErrBadParamInput.Error())
-	}
 
-	if len(filenames) < 2 {
-		return c.JSON(http.StatusBadRequest, domain.ErrBadParamInput.Error())
-	}
-
-	pdfinPath, err := saveFileToTmp(filenames)
+	pdfinPath, err := saveFileToTmp(c)
 	if err != nil {
 		return c.JSON(http.StatusInternalServerError, err.Error())
 	}
 
-	pdfoutPath := "/tmp/splitedPDF.pdf"
-	err = api.MergeCreateFile(pdfinPath, pdfoutPath, false, nil)
+	if len(pdfinPath) != 1 {
+		return c.JSON(http.StatusInternalServerError, domain.ErrInternalServerError.Error())
+	}
+
+	pdfoutPath := "/tmp/splitedPDF"
+	os.MkdirAll(pdfoutPath, os.ModePerm)
+	// log.Printf("%+v", pdfinPath)
+	err = api.SplitFile(pdfinPath[0], pdfoutPath, 1, nil)
 	if err != nil {
-		log.Println(err)
+		log.Panicln(err)
 		return c.JSON(http.StatusInternalServerError, err.Error())
 	}
-	return c.Attachment(pdfoutPath, "splitPDF.pdf")
+	zipFilePath := "/tmp/splitPDF.zip"
+	err = zipFolder(zipFilePath, pdfoutPath)
+	if err != nil {
+		log.Panicln(err)
+		return c.JSON(http.StatusInternalServerError, domain.ErrInternalServerError.Error())
+	}
+	return c.Attachment(zipFilePath, "splitPDF.zip")
 }
 
 func CompressPDF(c echo.Context) error {
 	log.SetPrefix("Compress: ")
-	filenames, err := handleInputFile(c)
-	if err != nil {
-		return c.JSON(http.StatusBadRequest, domain.ErrBadParamInput.Error())
-	}
-
-	pdfinPath, err := saveFileToTmp(filenames)
+	pdfinPath, err := saveFileToTmp(c)
 	if err != nil {
 		return c.JSON(http.StatusInternalServerError, err.Error())
 	}
@@ -96,30 +98,72 @@ func CompressPDF(c echo.Context) error {
 
 }
 
-func handleInputFile(c echo.Context) ([]string, error) {
+func saveFileToTmp(c echo.Context) ([]string, error) {
 	form, err := c.MultipartForm()
 	if err != nil {
 		return []string{}, c.String(http.StatusBadRequest, domain.ErrBadParamInput.Error())
 	}
-	fileList := []string{}
+	// filenames := []string{}
+	pdfinPath := []string{}
+
 	files := form.File["files"]
 	for index := 0; index < len(files); index++ {
-		fileList = append(fileList, files[index].Filename)
-	}
-	return fileList, nil
-}
+		// filenames = append(filenames, files[index].Filename)
 
-func saveFileToTmp(filenames []string) ([]string, error) {
-	pdfinPath := []string{}
-	for index := 0; index < len(filenames); index++ {
-		file := filenames[index]
-		filepath := fmt.Sprintf("/tmp/%s", file)
+		// file := filenames[index]
+		src, err := files[index].Open()
+		if err != nil {
+			return []string{}, domain.ErrInternalServerError
+		}
+		filepath := fmt.Sprintf("/tmp/%s", files[index].Filename)
 		dst, err := os.Create(filepath)
 		if err != nil {
 			return []string{}, domain.ErrInternalServerError
 		}
 		pdfinPath = append(pdfinPath, filepath)
+		_, err = io.Copy(dst, src)
+		if err != nil {
+			return []string{}, domain.ErrInternalServerError
+		}
+		defer src.Close()
 		defer dst.Close()
 	}
 	return pdfinPath, nil
+}
+
+func zipFolder(zipFileName string, inputPath string) error {
+	zipFile, err := os.Create(zipFileName)
+	if err != nil {
+		return err
+	}
+	defer zipFile.Close()
+
+	zipWriter := zip.NewWriter(zipFile)
+	defer zipWriter.Close()
+
+	files, err := os.ReadDir(inputPath)
+	if err != nil {
+		return err
+	}
+
+	for _, f := range files {
+		filePath := filepath.Join(inputPath, f.Name())
+
+		pageFile, err := os.Open(filePath)
+		if err != nil {
+			return err
+		}
+		defer pageFile.Close()
+
+		zipEntry, err := zipWriter.Create(f.Name())
+		if err != nil {
+			return err
+		}
+
+		if _, err := io.Copy(zipEntry, pageFile); err != nil {
+			return err
+		}
+	}
+
+	return nil
 }
