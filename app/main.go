@@ -79,6 +79,7 @@ func main() {
 	// Build service Layer
 	svc := article.NewService(articleRepo, authorRepo)
 	rest.NewArticleHandler(e, svc)
+	rest.NewPDFHandler(e)
 
 	// Start Server
 	address := os.Getenv("SERVER_ADDRESS")
