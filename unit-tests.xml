@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="31" failures="0" errors="0" time="0.558163">
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/bxcodec/go-clean-arch/app" timestamp="2025-02-17T22:11:38+07:00">
+		<properties>
+			<property name="go.version" value="go1.22.3 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="15" failures="0" time="0.006000" name="github.com/bxcodec/go-clean-arch/article" timestamp="2025-02-17T22:11:38+07:00">
+		<properties>
+			<property name="go.version" value="go1.22.3 darwin/amd64"></property>
+		</properties>
+		<testcase classname="github.com/bxcodec/go-clean-arch/article" name="TestFetchArticle/success" time="0.000000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/article" name="TestFetchArticle/error-failed" time="0.000000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/article" name="TestFetchArticle" time="0.010000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/article" name="TestGetByID/success" time="0.000000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/article" name="TestGetByID/error-failed" time="0.000000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/article" name="TestGetByID" time="0.000000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/article" name="TestStore/success" time="0.000000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/article" name="TestStore/existing-title" time="0.000000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/article" name="TestStore" time="0.000000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/article" name="TestDelete/success" time="0.000000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/article" name="TestDelete/article-is-not-exist" time="0.000000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/article" name="TestDelete/error-happens-in-db" time="0.000000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/article" name="TestDelete" time="0.000000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/article" name="TestUpdate/success" time="0.000000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/article" name="TestUpdate" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/bxcodec/go-clean-arch/article/mocks" timestamp="2025-02-17T22:11:38+07:00">
+		<properties>
+			<property name="go.version" value="go1.22.3 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/bxcodec/go-clean-arch/domain" timestamp="2025-02-17T22:11:38+07:00">
+		<properties>
+			<property name="go.version" value="go1.22.3 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/bxcodec/go-clean-arch/internal/repository" timestamp="2025-02-17T22:11:38+07:00">
+		<properties>
+			<property name="go.version" value="go1.22.3 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="7" failures="0" time="0.000000" name="github.com/bxcodec/go-clean-arch/internal/repository/mysql" timestamp="2025-02-17T22:11:38+07:00">
+		<properties>
+			<property name="go.version" value="go1.22.3 darwin/amd64"></property>
+		</properties>
+		<testcase classname="github.com/bxcodec/go-clean-arch/internal/repository/mysql" name="TestFetchArticle" time="0.010000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/internal/repository/mysql" name="TestGetArticleByID" time="0.000000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/internal/repository/mysql" name="TestStoreArticle" time="0.000000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/internal/repository/mysql" name="TestGetArticleByTitle" time="0.000000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/internal/repository/mysql" name="TestDeleteArticle" time="0.000000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/internal/repository/mysql" name="TestUpdateArticle" time="0.000000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/internal/repository/mysql" name="TestGetAuthorByID" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="8" failures="0" time="0.000000" name="github.com/bxcodec/go-clean-arch/internal/rest" timestamp="2025-02-17T22:11:38+07:00">
+		<properties>
+			<property name="go.version" value="go1.22.3 darwin/amd64"></property>
+		</properties>
+		<testcase classname="github.com/bxcodec/go-clean-arch/internal/rest" name="TestFetch" time="0.010000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/internal/rest" name="TestFetchError" time="0.000000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/internal/rest" name="TestGetByID" time="0.000000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/internal/rest" name="TestStore" time="0.010000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/internal/rest" name="TestDelete" time="0.000000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/internal/rest" name="TestMerge" time="0.050000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/internal/rest" name="TestSpilt" time="0.190000"></testcase>
+		<testcase classname="github.com/bxcodec/go-clean-arch/internal/rest" name="TestCompress" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="1" failures="0" time="0.000000" name="github.com/bxcodec/go-clean-arch/internal/rest/middleware" timestamp="2025-02-17T22:11:38+07:00">
+		<properties>
+			<property name="go.version" value="go1.22.3 darwin/amd64"></property>
+		</properties>
+		<testcase classname="github.com/bxcodec/go-clean-arch/internal/rest/middleware" name="TestCORS" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/bxcodec/go-clean-arch/internal/rest/mocks" timestamp="2025-02-17T22:11:38+07:00">
+		<properties>
+			<property name="go.version" value="go1.22.3 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+</testsuites>
