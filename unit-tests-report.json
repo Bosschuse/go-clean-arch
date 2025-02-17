@@ -1,0 +1,160 @@
+{"Time":"2025-02-17T19:30:18.615958+07:00","Action":"start","Package":"github.com/bxcodec/go-clean-arch/app"}
+{"Time":"2025-02-17T19:30:18.616534+07:00","Action":"start","Package":"github.com/bxcodec/go-clean-arch/article"}
+{"Time":"2025-02-17T19:30:18.61663+07:00","Action":"start","Package":"github.com/bxcodec/go-clean-arch/article/mocks"}
+{"Time":"2025-02-17T19:30:18.62077+07:00","Action":"start","Package":"github.com/bxcodec/go-clean-arch/domain"}
+{"Time":"2025-02-17T19:30:18.620977+07:00","Action":"start","Package":"github.com/bxcodec/go-clean-arch/internal/repository"}
+{"Time":"2025-02-17T19:30:18.621187+07:00","Action":"start","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql"}
+{"Time":"2025-02-17T19:30:18.624654+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/domain","Output":"?   \tgithub.com/bxcodec/go-clean-arch/domain\t[no test files]\n"}
+{"Time":"2025-02-17T19:30:18.624848+07:00","Action":"skip","Package":"github.com/bxcodec/go-clean-arch/domain","Elapsed":0.004}
+{"Time":"2025-02-17T19:30:19.235872+07:00","Action":"start","Package":"github.com/bxcodec/go-clean-arch/internal/rest"}
+{"Time":"2025-02-17T19:30:19.235972+07:00","Action":"start","Package":"github.com/bxcodec/go-clean-arch/internal/rest/middleware"}
+{"Time":"2025-02-17T19:30:19.2374+07:00","Action":"start","Package":"github.com/bxcodec/go-clean-arch/internal/rest/mocks"}
+{"Time":"2025-02-17T19:30:19.534453+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article/mocks","Output":"\tgithub.com/bxcodec/go-clean-arch/article/mocks\t\tcoverage: 0.0% of statements\n"}
+{"Time":"2025-02-17T19:30:19.535071+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/repository","Output":"\tgithub.com/bxcodec/go-clean-arch/internal/repository\t\tcoverage: 0.0% of statements\n"}
+{"Time":"2025-02-17T19:30:19.539447+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest/mocks","Output":"\tgithub.com/bxcodec/go-clean-arch/internal/rest/mocks\t\tcoverage: 0.0% of statements\n"}
+{"Time":"2025-02-17T19:30:19.539362+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/app","Output":"\tgithub.com/bxcodec/go-clean-arch/app\t\tcoverage: 0.0% of statements\n"}
+{"Time":"2025-02-17T19:30:19.559525+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/article/mocks","Elapsed":0.943}
+{"Time":"2025-02-17T19:30:19.559973+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/internal/rest/mocks","Elapsed":0.323}
+{"Time":"2025-02-17T19:30:19.563916+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/internal/repository","Elapsed":0.943}
+{"Time":"2025-02-17T19:30:19.568158+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/app","Elapsed":0.952}
+{"Time":"2025-02-17T19:30:19.980354+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestFetchArticle"}
+{"Time":"2025-02-17T19:30:19.980389+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestFetchArticle","Output":"=== RUN   TestFetchArticle\n"}
+{"Time":"2025-02-17T19:30:19.981703+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestFetchArticle/success"}
+{"Time":"2025-02-17T19:30:19.981718+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestFetchArticle/success","Output":"=== RUN   TestFetchArticle/success\n"}
+{"Time":"2025-02-17T19:30:19.988974+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestFetchArticle/success","Output":"--- PASS: TestFetchArticle/success (0.01s)\n"}
+{"Time":"2025-02-17T19:30:19.98915+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestFetchArticle/success","Elapsed":0.01}
+{"Time":"2025-02-17T19:30:19.990147+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestFetchArticle/error-failed"}
+{"Time":"2025-02-17T19:30:19.990152+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestFetchArticle/error-failed","Output":"=== RUN   TestFetchArticle/error-failed\n"}
+{"Time":"2025-02-17T19:30:19.991273+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestFetchArticle/error-failed","Output":"--- PASS: TestFetchArticle/error-failed (0.00s)\n"}
+{"Time":"2025-02-17T19:30:19.991295+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestFetchArticle/error-failed","Elapsed":0}
+{"Time":"2025-02-17T19:30:19.992521+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestFetchArticle","Output":"--- PASS: TestFetchArticle (0.01s)\n"}
+{"Time":"2025-02-17T19:30:19.992599+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestFetchArticle","Elapsed":0.01}
+{"Time":"2025-02-17T19:30:19.992648+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestGetByID"}
+{"Time":"2025-02-17T19:30:19.992653+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestGetByID","Output":"=== RUN   TestGetByID\n"}
+{"Time":"2025-02-17T19:30:19.992755+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestGetByID/success"}
+{"Time":"2025-02-17T19:30:19.992773+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestGetByID/success","Output":"=== RUN   TestGetByID/success\n"}
+{"Time":"2025-02-17T19:30:19.993788+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestGetByID/success","Output":"--- PASS: TestGetByID/success (0.00s)\n"}
+{"Time":"2025-02-17T19:30:19.993796+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestGetByID/success","Elapsed":0}
+{"Time":"2025-02-17T19:30:19.993835+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestGetByID/error-failed"}
+{"Time":"2025-02-17T19:30:19.993845+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestGetByID/error-failed","Output":"=== RUN   TestGetByID/error-failed\n"}
+{"Time":"2025-02-17T19:30:19.995002+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestGetByID/error-failed","Output":"--- PASS: TestGetByID/error-failed (0.00s)\n"}
+{"Time":"2025-02-17T19:30:19.995008+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestGetByID/error-failed","Elapsed":0}
+{"Time":"2025-02-17T19:30:19.995049+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestGetByID","Output":"--- PASS: TestGetByID (0.00s)\n"}
+{"Time":"2025-02-17T19:30:19.99506+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestGetByID","Elapsed":0}
+{"Time":"2025-02-17T19:30:19.995077+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestStore"}
+{"Time":"2025-02-17T19:30:19.995079+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestStore","Output":"=== RUN   TestStore\n"}
+{"Time":"2025-02-17T19:30:19.995105+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestStore/success"}
+{"Time":"2025-02-17T19:30:19.995112+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestStore/success","Output":"=== RUN   TestStore/success\n"}
+{"Time":"2025-02-17T19:30:19.998282+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestStore/success","Output":"--- PASS: TestStore/success (0.00s)\n"}
+{"Time":"2025-02-17T19:30:19.998288+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestStore/success","Elapsed":0}
+{"Time":"2025-02-17T19:30:19.998356+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestStore/existing-title"}
+{"Time":"2025-02-17T19:30:19.99836+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestStore/existing-title","Output":"=== RUN   TestStore/existing-title\n"}
+{"Time":"2025-02-17T19:30:19.998805+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestStore/existing-title","Output":"--- PASS: TestStore/existing-title (0.00s)\n"}
+{"Time":"2025-02-17T19:30:19.998811+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestStore/existing-title","Elapsed":0}
+{"Time":"2025-02-17T19:30:19.998836+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestStore","Output":"--- PASS: TestStore (0.00s)\n"}
+{"Time":"2025-02-17T19:30:19.998852+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestStore","Elapsed":0}
+{"Time":"2025-02-17T19:30:19.998872+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestDelete"}
+{"Time":"2025-02-17T19:30:19.998875+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestDelete","Output":"=== RUN   TestDelete\n"}
+{"Time":"2025-02-17T19:30:19.998937+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestDelete/success"}
+{"Time":"2025-02-17T19:30:19.998945+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestDelete/success","Output":"=== RUN   TestDelete/success\n"}
+{"Time":"2025-02-17T19:30:19.999392+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestDelete/success","Output":"--- PASS: TestDelete/success (0.00s)\n"}
+{"Time":"2025-02-17T19:30:19.999409+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestDelete/success","Elapsed":0}
+{"Time":"2025-02-17T19:30:19.999465+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestDelete/article-is-not-exist"}
+{"Time":"2025-02-17T19:30:19.999468+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestDelete/article-is-not-exist","Output":"=== RUN   TestDelete/article-is-not-exist\n"}
+{"Time":"2025-02-17T19:30:19.99976+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestDelete/article-is-not-exist","Output":"--- PASS: TestDelete/article-is-not-exist (0.00s)\n"}
+{"Time":"2025-02-17T19:30:19.999765+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestDelete/article-is-not-exist","Elapsed":0}
+{"Time":"2025-02-17T19:30:20.000111+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestDelete/error-happens-in-db"}
+{"Time":"2025-02-17T19:30:20.000115+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestDelete/error-happens-in-db","Output":"=== RUN   TestDelete/error-happens-in-db\n"}
+{"Time":"2025-02-17T19:30:20.000447+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestDelete/error-happens-in-db","Output":"--- PASS: TestDelete/error-happens-in-db (0.00s)\n"}
+{"Time":"2025-02-17T19:30:20.000451+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestDelete/error-happens-in-db","Elapsed":0}
+{"Time":"2025-02-17T19:30:20.000469+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestDelete","Output":"--- PASS: TestDelete (0.00s)\n"}
+{"Time":"2025-02-17T19:30:20.000497+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestDelete","Elapsed":0}
+{"Time":"2025-02-17T19:30:20.000501+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestUpdate"}
+{"Time":"2025-02-17T19:30:20.000503+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestUpdate","Output":"=== RUN   TestUpdate\n"}
+{"Time":"2025-02-17T19:30:20.00055+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestUpdate/success"}
+{"Time":"2025-02-17T19:30:20.000564+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestUpdate/success","Output":"=== RUN   TestUpdate/success\n"}
+{"Time":"2025-02-17T19:30:20.002422+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestUpdate/success","Output":"--- PASS: TestUpdate/success (0.00s)\n"}
+{"Time":"2025-02-17T19:30:20.002428+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestUpdate/success","Elapsed":0}
+{"Time":"2025-02-17T19:30:20.002471+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestUpdate","Output":"--- PASS: TestUpdate (0.00s)\n"}
+{"Time":"2025-02-17T19:30:20.00248+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/article","Test":"TestUpdate","Elapsed":0}
+{"Time":"2025-02-17T19:30:20.003605+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Output":"PASS\n"}
+{"Time":"2025-02-17T19:30:20.00558+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Output":"coverage: 75.0% of statements\n"}
+{"Time":"2025-02-17T19:30:20.304883+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestFetchArticle"}
+{"Time":"2025-02-17T19:30:20.304913+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestFetchArticle","Output":"=== RUN   TestFetchArticle\n"}
+{"Time":"2025-02-17T19:30:20.316547+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestFetchArticle","Output":"--- PASS: TestFetchArticle (0.01s)\n"}
+{"Time":"2025-02-17T19:30:20.317618+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestFetchArticle","Elapsed":0.01}
+{"Time":"2025-02-17T19:30:20.318398+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestGetArticleByID"}
+{"Time":"2025-02-17T19:30:20.318406+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestGetArticleByID","Output":"=== RUN   TestGetArticleByID\n"}
+{"Time":"2025-02-17T19:30:20.320517+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestGetArticleByID","Output":"--- PASS: TestGetArticleByID (0.00s)\n"}
+{"Time":"2025-02-17T19:30:20.320524+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestGetArticleByID","Elapsed":0}
+{"Time":"2025-02-17T19:30:20.320527+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestStoreArticle"}
+{"Time":"2025-02-17T19:30:20.320529+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestStoreArticle","Output":"=== RUN   TestStoreArticle\n"}
+{"Time":"2025-02-17T19:30:20.323148+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestStoreArticle","Output":"--- PASS: TestStoreArticle (0.00s)\n"}
+{"Time":"2025-02-17T19:30:20.323153+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestStoreArticle","Elapsed":0}
+{"Time":"2025-02-17T19:30:20.323155+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestGetArticleByTitle"}
+{"Time":"2025-02-17T19:30:20.323157+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestGetArticleByTitle","Output":"=== RUN   TestGetArticleByTitle\n"}
+{"Time":"2025-02-17T19:30:20.324539+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestGetArticleByTitle","Output":"--- PASS: TestGetArticleByTitle (0.00s)\n"}
+{"Time":"2025-02-17T19:30:20.324543+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestGetArticleByTitle","Elapsed":0}
+{"Time":"2025-02-17T19:30:20.324546+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestDeleteArticle"}
+{"Time":"2025-02-17T19:30:20.324548+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestDeleteArticle","Output":"=== RUN   TestDeleteArticle\n"}
+{"Time":"2025-02-17T19:30:20.325765+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestDeleteArticle","Output":"--- PASS: TestDeleteArticle (0.00s)\n"}
+{"Time":"2025-02-17T19:30:20.325769+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestDeleteArticle","Elapsed":0}
+{"Time":"2025-02-17T19:30:20.325771+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestUpdateArticle"}
+{"Time":"2025-02-17T19:30:20.325773+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestUpdateArticle","Output":"=== RUN   TestUpdateArticle\n"}
+{"Time":"2025-02-17T19:30:20.326931+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestUpdateArticle","Output":"--- PASS: TestUpdateArticle (0.00s)\n"}
+{"Time":"2025-02-17T19:30:20.326938+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestUpdateArticle","Elapsed":0}
+{"Time":"2025-02-17T19:30:20.326942+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestGetAuthorByID"}
+{"Time":"2025-02-17T19:30:20.326954+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestGetAuthorByID","Output":"=== RUN   TestGetAuthorByID\n"}
+{"Time":"2025-02-17T19:30:20.329191+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestGetAuthorByID","Output":"--- PASS: TestGetAuthorByID (0.00s)\n"}
+{"Time":"2025-02-17T19:30:20.329204+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Test":"TestGetAuthorByID","Elapsed":0}
+{"Time":"2025-02-17T19:30:20.330388+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Output":"PASS\n"}
+{"Time":"2025-02-17T19:30:20.332198+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Output":"coverage: 75.0% of statements\n"}
+{"Time":"2025-02-17T19:30:20.793976+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestFetch"}
+{"Time":"2025-02-17T19:30:20.794003+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestFetch","Output":"=== RUN   TestFetch\n"}
+{"Time":"2025-02-17T19:30:20.808429+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestFetch","Output":"--- PASS: TestFetch (0.01s)\n"}
+{"Time":"2025-02-17T19:30:20.808875+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestFetch","Elapsed":0.01}
+{"Time":"2025-02-17T19:30:20.809459+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestFetchError"}
+{"Time":"2025-02-17T19:30:20.809464+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestFetchError","Output":"=== RUN   TestFetchError\n"}
+{"Time":"2025-02-17T19:30:20.811115+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestFetchError","Output":"time=\"2025-02-17T19:30:20+07:00\" level=error msg=\"internal Server Error\"\n"}
+{"Time":"2025-02-17T19:30:20.811333+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestFetchError","Output":"--- PASS: TestFetchError (0.00s)\n"}
+{"Time":"2025-02-17T19:30:20.811338+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestFetchError","Elapsed":0}
+{"Time":"2025-02-17T19:30:20.811343+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestGetByID"}
+{"Time":"2025-02-17T19:30:20.811345+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestGetByID","Output":"=== RUN   TestGetByID\n"}
+{"Time":"2025-02-17T19:30:20.81255+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestGetByID","Output":"--- PASS: TestGetByID (0.00s)\n"}
+{"Time":"2025-02-17T19:30:20.812554+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestGetByID","Elapsed":0}
+{"Time":"2025-02-17T19:30:20.812556+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestStore"}
+{"Time":"2025-02-17T19:30:20.812558+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestStore","Output":"=== RUN   TestStore\n"}
+{"Time":"2025-02-17T19:30:20.819751+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestStore","Output":"--- PASS: TestStore (0.01s)\n"}
+{"Time":"2025-02-17T19:30:20.819764+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestStore","Elapsed":0.01}
+{"Time":"2025-02-17T19:30:20.819769+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestDelete"}
+{"Time":"2025-02-17T19:30:20.819772+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestDelete","Output":"=== RUN   TestDelete\n"}
+{"Time":"2025-02-17T19:30:20.820876+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestDelete","Output":"--- PASS: TestDelete (0.00s)\n"}
+{"Time":"2025-02-17T19:30:20.820883+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestDelete","Elapsed":0}
+{"Time":"2025-02-17T19:30:20.820886+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestMerge"}
+{"Time":"2025-02-17T19:30:20.820888+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestMerge","Output":"=== RUN   TestMerge\n"}
+{"Time":"2025-02-17T19:30:20.822505+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestMerge","Output":"--- PASS: TestMerge (0.00s)\n"}
+{"Time":"2025-02-17T19:30:20.822644+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestMerge","Elapsed":0}
+{"Time":"2025-02-17T19:30:20.822662+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestSpil"}
+{"Time":"2025-02-17T19:30:20.822665+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestSpil","Output":"=== RUN   TestSpil\n"}
+{"Time":"2025-02-17T19:30:20.822756+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestSpil","Output":"--- PASS: TestSpil (0.00s)\n"}
+{"Time":"2025-02-17T19:30:20.822776+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestSpil","Elapsed":0}
+{"Time":"2025-02-17T19:30:20.82278+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestCompress"}
+{"Time":"2025-02-17T19:30:20.822794+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestCompress","Output":"=== RUN   TestCompress\n"}
+{"Time":"2025-02-17T19:30:20.822806+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestCompress","Output":"--- PASS: TestCompress (0.00s)\n"}
+{"Time":"2025-02-17T19:30:20.822825+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Test":"TestCompress","Elapsed":0}
+{"Time":"2025-02-17T19:30:20.823969+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Output":"PASS\n"}
+{"Time":"2025-02-17T19:30:20.825679+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Output":"coverage: 39.1% of statements\n"}
+{"Time":"2025-02-17T19:30:20.986794+07:00","Action":"run","Package":"github.com/bxcodec/go-clean-arch/internal/rest/middleware","Test":"TestCORS"}
+{"Time":"2025-02-17T19:30:20.98682+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest/middleware","Test":"TestCORS","Output":"=== RUN   TestCORS\n"}
+{"Time":"2025-02-17T19:30:20.990219+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest/middleware","Test":"TestCORS","Output":"--- PASS: TestCORS (0.00s)\n"}
+{"Time":"2025-02-17T19:30:20.991359+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/internal/rest/middleware","Test":"TestCORS","Elapsed":0}
+{"Time":"2025-02-17T19:30:20.992521+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest/middleware","Output":"PASS\n"}
+{"Time":"2025-02-17T19:30:20.994059+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest/middleware","Output":"coverage: 30.0% of statements\n"}
+{"Time":"2025-02-17T19:30:21.014666+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/article","Output":"ok  \tgithub.com/bxcodec/go-clean-arch/article\t2.381s\tcoverage: 75.0% of statements\n"}
+{"Time":"2025-02-17T19:30:21.014785+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/article","Elapsed":2.398}
+{"Time":"2025-02-17T19:30:21.347963+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Output":"ok  \tgithub.com/bxcodec/go-clean-arch/internal/repository/mysql\t2.714s\tcoverage: 75.0% of statements\n"}
+{"Time":"2025-02-17T19:30:21.348038+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/internal/repository/mysql","Elapsed":2.727}
+{"Time":"2025-02-17T19:30:21.846032+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Output":"ok  \tgithub.com/bxcodec/go-clean-arch/internal/rest\t2.609s\tcoverage: 39.1% of statements\n"}
+{"Time":"2025-02-17T19:30:21.846088+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/internal/rest","Elapsed":2.61}
+{"Time":"2025-02-17T19:30:22.007863+07:00","Action":"output","Package":"github.com/bxcodec/go-clean-arch/internal/rest/middleware","Output":"ok  \tgithub.com/bxcodec/go-clean-arch/internal/rest/middleware\t2.769s\tcoverage: 30.0% of statements\n"}
+{"Time":"2025-02-17T19:30:22.007892+07:00","Action":"pass","Package":"github.com/bxcodec/go-clean-arch/internal/rest/middleware","Elapsed":2.7720000000000002}
