@@ -27,13 +27,14 @@ func MergePDF(c echo.Context) error {
 	// 	return c.JSON(http.StatusBadRequest, domain.ErrBadParamInput.Error())
 	// }
 
-	// if len(filenames) < 2 {
-	// 	return c.JSON(http.StatusBadRequest, domain.ErrBadParamInput.Error())
-	// }
+	//
 
 	pdfinPath, err := saveFileToTmp(c)
 	if err != nil {
 		return c.JSON(http.StatusInternalServerError, err.Error())
+	}
+	if len(pdfinPath) < 2 {
+		return c.JSON(http.StatusBadRequest, domain.ErrBadParamInput.Error())
 	}
 
 	pdfoutPath := "/tmp/mergedPDF.pdf"
