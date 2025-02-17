@@ -15,25 +15,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func createSomePDF(filepath string) error {
-	file, err := os.Create(filepath)
-	if err != nil {
-		return err
-	}
-	defer file.Close()
-	_, err = file.WriteString("some context")
-	if err != nil {
-		return err
-	}
-	return nil
-}
-
-func removeTestPDF(filepath string) error {
-	err := os.Remove(filepath)
-	return err
-}
-
-func createMultipartRequest(url string, fieldName string, filePaths []string) (*http.Request, error) {
+func createMultipartRequest(url *string, fieldName *string, filePaths []string) (*http.Request, error) {
 	body := new(bytes.Buffer)
 	writer := multipart.NewWriter(body)
 
@@ -44,7 +26,7 @@ func createMultipartRequest(url string, fieldName string, filePaths []string) (*
 		}
 		defer file.Close()
 
-		part, err := writer.CreateFormFile(fieldName, filePath)
+		part, err := writer.CreateFormFile(*fieldName, filePath)
 		if err != nil {
 			return nil, err
 		}
@@ -55,7 +37,7 @@ func createMultipartRequest(url string, fieldName string, filePaths []string) (*
 
 	writer.Close()
 
-	req := httptest.NewRequest(http.MethodPost, url, body)
+	req := httptest.NewRequest(http.MethodPost, *url, body)
 	req.Header.Set("Content-Type", writer.FormDataContentType())
 	return req, nil
 }
@@ -63,24 +45,9 @@ func createMultipartRequest(url string, fieldName string, filePaths []string) (*
 func TestMerge(t *testing.T) {
 	e := echo.New()
 	rec := httptest.NewRecorder()
-	err := createSomePDF("file1.pdf")
-	if err != nil {
-		log.Panicln(err)
-	}
-	err = createSomePDF("file2.pdf")
-	if err != nil {
-		log.Panicln(err)
-	}
-
-	req, err := createMultipartRequest("/mergePDF", "files", []string{"test.pdf", "test.pdf"})
-	if err != nil {
-		log.Panicln(err)
-	}
-	err = removeTestPDF("file1.pdf")
-	if err != nil {
-		log.Panicln(err)
-	}
-	err = removeTestPDF("file2.pdf")
+	url := "/mergePDF"
+	field := "files"
+	req, err := createMultipartRequest(&url, &field, []string{"test.pdf", "test.pdf"})
 	if err != nil {
 		log.Panicln(err)
 	}
@@ -97,8 +64,9 @@ func TestMerge(t *testing.T) {
 func TestSpilt(t *testing.T) {
 	e := echo.New()
 	rec := httptest.NewRecorder()
-	// accept 1 pdf file
-	req, err := createMultipartRequest("/splitPDF", "files", []string{"test.pdf"})
+	url := "/splitPDF"
+	field := "files"
+	req, err := createMultipartRequest(&url, &field, []string{"test.pdf"})
 	if err != nil {
 		log.Panicln(err)
 	}
@@ -114,7 +82,9 @@ func TestSpilt(t *testing.T) {
 func TestCompress(t *testing.T) {
 	e := echo.New()
 	rec := httptest.NewRecorder()
-	req, err := createMultipartRequest("/compressPDF", "files", []string{"test.pdf"})
+	url := "/compressPDF"
+	field := "files"
+	req, err := createMultipartRequest(&url, &field, []string{"test.pdf"})
 	if err != nil {
 		log.Panicln(err)
 	}

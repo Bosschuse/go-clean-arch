@@ -22,13 +22,6 @@ func NewPDFHandler(e *echo.Echo) {
 
 func MergePDF(c echo.Context) error {
 	log.SetPrefix("MergePDF: ")
-	// filenames, err := handleInputFile(c)
-	// if err != nil {
-	// 	return c.JSON(http.StatusBadRequest, domain.ErrBadParamInput.Error())
-	// }
-
-	//
-
 	pdfinPath, err := saveFileToTmp(c)
 	if err != nil {
 		return c.JSON(http.StatusInternalServerError, err.Error())
@@ -70,7 +63,7 @@ func SplitPDF(c echo.Context) error {
 		return c.JSON(http.StatusInternalServerError, err.Error())
 	}
 	zipFilePath := "/tmp/splitPDF.zip"
-	err = zipFolder(zipFilePath, pdfoutPath)
+	err = zipFolder(zipFilePath, &pdfoutPath)
 	if err != nil {
 		log.Panicln(err)
 		return c.JSON(http.StatusInternalServerError, domain.ErrInternalServerError.Error())
@@ -132,7 +125,7 @@ func saveFileToTmp(c echo.Context) ([]string, error) {
 	return pdfinPath, nil
 }
 
-func zipFolder(zipFileName string, inputPath string) error {
+func zipFolder(zipFileName string, inputPath *string) error {
 	zipFile, err := os.Create(zipFileName)
 	if err != nil {
 		return err
@@ -142,13 +135,13 @@ func zipFolder(zipFileName string, inputPath string) error {
 	zipWriter := zip.NewWriter(zipFile)
 	defer zipWriter.Close()
 
-	files, err := os.ReadDir(inputPath)
+	files, err := os.ReadDir(*inputPath)
 	if err != nil {
 		return err
 	}
 
 	for _, f := range files {
-		filePath := filepath.Join(inputPath, f.Name())
+		filePath := filepath.Join(*inputPath, f.Name())
 
 		pageFile, err := os.Open(filePath)
 		if err != nil {
