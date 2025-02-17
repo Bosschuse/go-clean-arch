@@ -1,0 +1,115 @@
+openapi: 3.0.0
+info:
+  title: PDF
+  description: An API to merge PDF files.
+  version: 1.0.0
+openapi: 3.0.3
+info:
+  title: Swagger Petstore - OpenAPI 3.0
+  version: 1.0.11
+
+tags:
+  - name: pdf
+    description: pdf
+paths:
+  /mergePDF:
+    post:
+      tags: 
+       - pdf
+      summary: Merge PDF files
+      description: Merges multiple PDF files into a single PDF.
+      operationId: mergePDF
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                files:
+                  type: array
+                  items:
+                    type: string
+                    format: binary
+                  description: List of PDF files to merge.
+            encoding:
+              files:
+                contentType: application/pdf
+      responses:
+        '200':
+          description: Successfully merged PDFs
+          content:
+            application/pdf:
+              schema:
+                type: string
+                format: binary
+        '400':
+          description: Bad request
+        '500':
+          description: Internal server error
+  /splitPDF:
+    post:
+      tags: 
+         - pdf
+      summary: Split a PDF file
+      description: Splits a single PDF file into multiple files.
+      operationId: splitPDF
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                files:
+                  type: string
+                  format: binary
+                  description: The PDF file to split.
+            encoding:
+              files:
+                contentType: application/pdf
+      responses:
+        '200':
+          description: Successfully split PDF
+          content:
+            application/zip:
+              schema:
+                type: string
+                format: binary
+        '400':
+          description: Bad request
+        '500':
+          description: Internal server error
+  /compressPDF:
+    post:
+      tags: 
+       - pdf
+      summary: Compress a PDF file
+      description: Compresses a PDF file to reduce its size.
+      operationId: compressPDF
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                files:
+                  type: string
+                  format: binary
+                  description: The PDF file to compress.
+            encoding:
+              files:
+                contentType: application/pdf
+      responses:
+        '200':
+          description: Successfully compressed PDF
+          content:
+            application/pdf:
+              schema:
+                type: string
+                format: binary
+        '400':
+          description: Bad request
+        '500':
+          description: Internal server error
