@@ -47,7 +47,7 @@ func TestMerge(t *testing.T) {
 	rec := httptest.NewRecorder()
 	url := "/mergePDF"
 	field := "files"
-	req, err := createMultipartRequest(&url, &field, []string{"test.pdf", "test.pdf"})
+	req, err := createMultipartRequest(&url, &field, []string{"sample.pdf", "sample.pdf"})
 	if err != nil {
 		log.Panicln(err)
 	}
@@ -66,7 +66,7 @@ func TestSpilt(t *testing.T) {
 	rec := httptest.NewRecorder()
 	url := "/splitPDF"
 	field := "files"
-	req, err := createMultipartRequest(&url, &field, []string{"test.pdf"})
+	req, err := createMultipartRequest(&url, &field, []string{"sample.pdf"})
 	if err != nil {
 		log.Panicln(err)
 	}
@@ -84,7 +84,7 @@ func TestCompress(t *testing.T) {
 	rec := httptest.NewRecorder()
 	url := "/compressPDF"
 	field := "files"
-	req, err := createMultipartRequest(&url, &field, []string{"test.pdf"})
+	req, err := createMultipartRequest(&url, &field, []string{"sample.pdf"})
 	if err != nil {
 		log.Panicln(err)
 	}
